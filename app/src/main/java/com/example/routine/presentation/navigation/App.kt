@@ -5,7 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.routine.presentation.ui.screens.RegisterScreen
+import com.example.routine.presentation.ui.screens.auth.RegisterScreen
 
 @Composable
 fun App(paddingValues: PaddingValues) {
@@ -13,7 +13,9 @@ fun App(paddingValues: PaddingValues) {
 
     NavHost(navController =  navController, startDestination = Register)  {
         composable<Register> {
-            RegisterScreen(paddingValues = paddingValues)
+            RegisterScreen(
+                paddingValues
+            )
         }
 
 
